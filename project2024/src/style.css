@@ -1,0 +1,145 @@
+.menu.show{
+    display: block;
+}
+body.light { 
+    background-color: #ffffff;
+    color: #333333;
+}
+
+body.dark {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.festive {
+    background-color: #ffefd5; /* Light festive yellow */
+    color: #ff4500; /* Orange-red text */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4; /* Light background */
+    color: #333; /* Dark text color */
+    display: flex;
+    flex-direction: column; 
+    height: 100vh;
+    transition: background-color 2s ease-in-out; 
+}
+
+
+.top-nav {
+    background-color: #ddd; 
+    color: #333; 
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.nav-item a {
+    color: #333; 
+    font-size: 24px; 
+    text-decoration: none;
+}
+
+.nav-item a:hover {
+    color: #fff; 
+    background-color: #888; 
+    padding: 8px;
+    border-radius: 5px;
+}
+
+
+.menu {
+    display: none; 
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #ddd; /* Light grey background for menu */
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.menu a {
+    display: block;
+    color: #333; /* Dark text color */
+    text-decoration: none;
+    padding: 10px;
+}
+
+.menu a:hover {
+    background-color: #888; 
+}
+
+/* Main Content */
+.main-content {
+    margin-top: 20px;
+    padding: 20px;
+    flex: 1; /* Allow this to grow and take available space */
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: calc(100vh - 80px); /* Adjust according to the height of the top nav */
+}
+
+/* Container for countdown */
+.container {
+    text-align: center; /* Center text inside the container */
+}
+
+/* Countdown Display */
+.countdown {
+    margin-top: 20px;
+    font-size: 24px; /* Increase font size for better visibility */
+    color: #333; /* Dark text color */
+}
+
+label{
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input{
+    display: block;
+    margin: 5px 0 20px 0;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+
+}
+
+button{
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #555;
+}
+
+.countdown span{
+    display: inline;
+    animation: tick 1s ease-in-out;
+}
+
+@keyframes tick{
+    0%{
+        transform: scale(1,2);
+        color: #6f0404;
+    }
+    100%{
+        transform: scale(1);
+        color: #333;
+    }
+}

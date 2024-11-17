@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Days To Go</title>
+    <link rel="stylesheet" href="../src/style.css">
+</head>
+<body>
+
+
+    
+    <div class="top-nav">
+        <div class="nav-item">
+            <a href="aboutUs.html" title="About Us">ℹ️</a>
+        </div>
+        <div class="nav-item">
+            <a href="contactUs.html" title="Contact Us">📞</a>
+        </div>
+        <div class="nav-item">
+            <a href="index.html" title="Counter">⏱️</a>
+        </div>
+    <select id = "theme" onchange="changeTheme()">
+        <option value = "light">Light (default)</option>
+        <option value = "dark">Dark</option>
+        <option value = "festive">Festive</option>
+    </select> 
+    </div>
+
+    
+    <div class="menu" id="menu">
+        <a href="aboutUs.html">About Us</a>
+        <a href="contactUs.html">Contact Us</a>
+        <a href="index.html">Counter</a>
+    </div>
+
+    
+    <div class="main-content">
+        <div class="container">
+            <h1>Days To Go</h1>
+            <label for="days">Enter Days:</label>
+            <input type="number" id="days" min="1" required>
+            <label for="eventName"> Event Name:</label>
+            <input type ="text" id = "eventName" required>
+            <button onclick="startCountdown()">Start Countdown</button>
+            <div class="countdown" id="countdownDisplay">0 Days, 0 Hours, 0 Minutes, 0 Seconds</div>
+        </div>
+    </div>
+
+    <script src="../src/script.js"></script>
+</body>
+</html>
+
